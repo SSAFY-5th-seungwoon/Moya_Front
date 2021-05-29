@@ -12,7 +12,7 @@ export default new Vuex.Store({
   state: {
     token: '',
     nextPage : '',
-    nextparams: '',
+    nextparams: {},
   },
   mutations: {
     LOGIN : function(state, res) {
@@ -23,10 +23,15 @@ export default new Vuex.Store({
       state.token =''
     },
     SETNEXTPAGE : function(state, res){
-      state.nextPage=res.name,
-      state.nextparams= res.params
-    }
+      if (state) {
+        state.nextPage=res.name,
+        state.nextparams= res.params
+      } else {
+        state.nextPage=''
+        state.nextparams= {}
+      }
 
+    }
   },
   actions: {
     login: function({commit},res){
