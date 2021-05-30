@@ -275,8 +275,10 @@ export default {
 		loginCheck : function(){
       if (!this.$store.state.token){
         const detailItem ={
-          name: 'community',
-          params: this.$route.params.detail
+          name: 'Review',
+          params: {
+						detail : this.$route.params.detail
+					}
         }
         this.$store.dispatch('setNextPage',detailItem)
         this.$router.push({name : 'Login'})

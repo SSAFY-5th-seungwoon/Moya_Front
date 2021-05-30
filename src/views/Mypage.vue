@@ -53,7 +53,9 @@ export default {
       if (!this.$store.state.token){
         const detailItem ={
           name: 'Mypage',
-          params: this.$route.params.username
+          params: {
+            username : this.$route.params.username
+          }
         }
         this.$store.dispatch('setNextPage',detailItem)
         this.$router.push({name : 'Login'})

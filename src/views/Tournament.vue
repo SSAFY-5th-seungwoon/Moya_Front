@@ -157,7 +157,7 @@ export default {
   created : function(){
     if (!this.token){
       const res = {
-        name : 'Tournament'
+        name : 'Tournament',
       }
       this.setNextPage(res)
       this.$router.push({name : 'Login'})

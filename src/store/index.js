@@ -23,14 +23,20 @@ export default new Vuex.Store({
       state.token =''
     },
     SETNEXTPAGE : function(state, res){
-      if (state) {
-        state.nextPage=res.name,
-        state.nextparams= res.params
+
+      if (res.name) {
+        state.nextPage=res.name
       } else {
         state.nextPage=''
         state.nextparams= {}
       }
-
+      
+      console.log(res.params)
+      if (res.params !={} ) { // 키가 한개라도 있으면
+        state.nextparams= res.params
+      }else {
+        state.nextparams= {}
+      }
     }
   },
   actions: {

@@ -93,13 +93,16 @@ export default {
           this.$store.dispatch('login',res)
           // nextPage가 있다면 보내주기
           if (this.nextPage){
-            if (this.nextparams){
-              this.$router.push(`${this.nextPage}/${this.nextparams}`)
+            console.log('비교' )
+            console.log(this.nextparams !== {})
+            if (this.nextparams !== {}){
+              console.log(this.nextparams)
+              this.$router.push({name: this.nextPage, params: this.nextparams})
+              // this.$router.push(`${this.nextPage}/${this.nextparams}`)
               this.setNextPage('')
             }else {
-              this.$router.push({ name: this.nextPage ,})
+              this.$router.push({name: this.nextPage})
               this.setNextPage('')
-
             }
           }else{
             this.$router.push({ name: 'Movies'})

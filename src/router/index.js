@@ -47,7 +47,8 @@ const routes = [
   {
     path: '/community/:detail',
     name: 'Review',
-    component: Review
+    component: Review,
+    props:true,
   },
   {
     path: '/tournament',
