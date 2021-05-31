@@ -28,7 +28,7 @@
 		  <!-- 글 내용 부분 -->
 			<div class="document_65603779_42982247 rhymix_content xe_content" data-pswp-uid="1">
 				<p>
-					<img :src="detail.movie|imageURL" alt="movie_poster" data-pswp-pid="1" @click="$router.push(`/movies/${detail.movie.id}`)">
+					<img :src="detail.movie|imageURL" alt="movie_poster" data-pswp-pid="1" @click="$router.push({name : 'MovieDetail', params : { movie_pk : detail.movie.id }})">
 				</p>
         <br>
 				<p>{{detail.content}}</p>
