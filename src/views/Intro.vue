@@ -57,7 +57,8 @@ window.addEventListener("load", function(){
   display: flex;          /*this*/
   justify-content: center;/*this*/
   align-items: center;    /*this*/
-  
+  overflow: hidden;  
+  cursor: pointer;
 }
 
 .box {
