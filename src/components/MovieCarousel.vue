@@ -13,11 +13,6 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import VueAwesomeSwiper from 'vue-awesome-swiper'
-import 'swiper/css/swiper.css'
-Vue.use(VueAwesomeSwiper);
-
 import {Swiper, } from 'vue-awesome-swiper'
 import MoviesSliderItem from '@/components/MoviesSliderItem'
 
@@ -37,10 +32,9 @@ export default {
     return {
       swiperOptions: {
         slidesPerView: 3,
-        spaceBetween: 30,
+        spaceBetween: 10,
         freeMode: true,
         mousewheel : true,
-
       },
     }
   },
@@ -56,7 +50,7 @@ export default {
   },
   filters : {
     styleSwiper : function(movie){
-      return "background-image:url("+"https://image.tmdb.org/t/p/w500"+movie.poster_path+")"
+      return "background:url("+"https://image.tmdb.org/t/p/w500"+movie.poster_path+") no-repeat; background-position: center center;"
     }
   },
   mounted() {

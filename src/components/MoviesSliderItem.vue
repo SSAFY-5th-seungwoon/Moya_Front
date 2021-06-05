@@ -1,6 +1,6 @@
 <template>
   <!-- <img class="swiper-slide" :src="imgSrc"/> -->
-  <div class="swiper-slide contentBx">
+  <div class="lazy-background swiper-slide contentBx ">
     <h2>{{ movie.title }}</h2>
     <div class="size">
       <star-rating :rating="parseFloat(movie.vote_average) / 2" :read-only="true" :increment="0.01"/>
@@ -33,5 +33,8 @@ export default {
 </script>
 
 <style>
-
+.lazy-background{
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 </style>

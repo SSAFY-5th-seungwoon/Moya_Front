@@ -12,10 +12,7 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import VueAwesomeSwiper from 'vue-awesome-swiper'
-import 'swiper/css/swiper.css'
-Vue.use(VueAwesomeSwiper);
+
 
 import {Swiper, } from 'vue-awesome-swiper'
 import MoviesSliderItem from '@/components/MoviesSliderItem'
@@ -70,7 +67,9 @@ export default {
   methods : {
     slideChangeTransitionStart : function() {
       console.log(this.swiper.activeIndex); //현재 index값 얻기
-    }
+    },
+
+
   },
   filters : {
     styleSwiper : function(movie){
@@ -85,7 +84,6 @@ export default {
 </script>
 
 <style>
-
 .swiper-container {
   background: #262626;
   width: 100%;
@@ -94,7 +92,7 @@ export default {
 }
 .swiper-slide {
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   width: 500px;
   height: 600px;
   background: #fff;
