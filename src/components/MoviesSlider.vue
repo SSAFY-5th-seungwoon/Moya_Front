@@ -4,7 +4,10 @@
 		@slideChange="slideChangeTransitionStart"
 	> 
     
-    <MoviesSliderItem v-for="(movie, idx) in movies" :key="idx" :movie="movie" :style="movie | styleSwiper"/>
+    <MoviesSliderItem v-for="(movie, idx) in movies" :key="idx" :movie="movie" :style="movie | styleSwiper"
+      :image-source="movie | imageURL"
+      background-size="cover"
+    />
 		<!-- pagination -->
 		<div class="swiper-pagination" slot="pagination"></div>
         
@@ -16,6 +19,7 @@
 
 import {Swiper, } from 'vue-awesome-swiper'
 import MoviesSliderItem from '@/components/MoviesSliderItem'
+import movieMixin from '@/mixins/movieMixin'
 
 
 export default {
@@ -30,6 +34,7 @@ export default {
       type : Array,
     },
   },
+  mixins : [movieMixin],
   data : function(){
     return {
       swiperOptions: {
@@ -114,6 +119,7 @@ export default {
   text-align: center;
   transition: 1s;
   padding-bottom : 50px;
+  background-position: center center;
 }
 .contentBx h2
 {

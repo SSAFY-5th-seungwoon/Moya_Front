@@ -9,7 +9,6 @@
       <div class="section-header">많은 사람이 본 영화</div>
       <MovieCarousel :movies="like_movies"/>
     </div>
-
   </div>
 </template>
 

@@ -5,7 +5,10 @@
 		@slideChange="slideChangeTransitionStart"
 	> 
     
-    <MoviesSliderItem v-for="(movie, idx) in movies" :key="idx" :movie="movie" :style="movie | styleSwiper"/>
+    <MoviesSliderItem v-for="(movie, idx) in movies" :key="idx" :movie="movie" 
+      :image-source="movie | imageURL"
+      background-size="cover"
+    />
 		<!-- pagination -->
 
 	</swiper>
@@ -15,6 +18,7 @@
 <script>
 import {Swiper, } from 'vue-awesome-swiper'
 import MoviesSliderItem from '@/components/MoviesSliderItem'
+import movieMixin from '@/mixins/movieMixin'
 
 export default {
   name : 'MovieCarousel',
@@ -23,6 +27,7 @@ export default {
     MoviesSliderItem,
 
   },
+  mixins : [movieMixin],
   props : {
     movies : {
       type : Array,
@@ -51,7 +56,7 @@ export default {
   filters : {
     styleSwiper : function(movie){
       return "background:url("+"https://image.tmdb.org/t/p/w500"+movie.poster_path+") no-repeat; background-position: center center;"
-    }
+    },
   },
   mounted() {
 			//console.log('Current Swiper instance object', this.swiper)

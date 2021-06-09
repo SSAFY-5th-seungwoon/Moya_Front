@@ -1,6 +1,12 @@
 <template>
   <!-- <img class="swiper-slide" :src="imgSrc"/> -->
-  <div class="swiper-slide contentBx ">
+  <div
+    :class="[imageClass, imageState]" 
+    :style="computedStyle" 
+    :data-width="imageWidth" 
+    :data-height="imageHeight" 
+    :data-state="imageState"
+  >
     <h2>{{ movie.title }}</h2>
     <div class="size">
       <star-rating :rating="parseFloat(movie.vote_average) / 2" :read-only="true" :increment="0.01"/>
@@ -18,17 +24,31 @@
 
 <script>
 import StarRating from 'vue-star-rating'
+import lazyMixin from '@/mixins/lazyMixin'
+
 
 export default {
   name : 'MoviesSliderItem',
   components : {
-    StarRating
+    StarRating,
   },
+  mixins : [lazyMixin],
+  data : function(){
+    return {
+      imageClass : "swiper-slide contentBx"
+    }
+  }, 
   props : {
     movie : {
       type : Object
     }
   },
+  computed : {
+    backgroundImage : function(){
+      return "https://image.tmdb.org/t/p/w500"+this.movie.poster_path
+    },
+
+  }
 }
 </script>
 
