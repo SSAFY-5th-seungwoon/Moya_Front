@@ -176,12 +176,12 @@ export default {
 					}
       })
         .then(res => {
-          console.log(res)
+          //console.log(res)
           // body.className =''
           this.$router.push({ name: 'Review', params:{detail: res.data.id} })
         })
         .catch(err => {
-          console.log(err)
+          //console.log(err)
         })
     }
   },

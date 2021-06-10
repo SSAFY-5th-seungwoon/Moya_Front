@@ -52,7 +52,7 @@ export default {
       let lazyBackgroundObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
-            console.log("evisible")
+            //console.log("evisible")
             entry.target.classList.add("visible");
             lazyBackgroundObserver.unobserve(entry.target);
           }

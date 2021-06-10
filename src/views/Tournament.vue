@@ -59,7 +59,7 @@ export default {
       })
       .then( res => {
         this.movies = res.data
-        console.log(res.data)
+        //console.log(res.data)
         this.first_movie = this.movies.shift()
         this.second_movie = this.movies.shift()
         this.movies = _.shuffle(this.movies)

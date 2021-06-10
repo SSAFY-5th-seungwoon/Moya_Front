@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     toggle () {
-      console.log("작동체크 토글")
+      //console.log("작동체크 토글")
       this.active = !this.active
       this.toggleAnimate = !this.toggleAnimate
       this.toggleColor = !this.toggleColor

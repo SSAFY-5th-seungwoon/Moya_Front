@@ -89,14 +89,14 @@ export default {
           data: loginItem
         })
         .then(res => {
-          console.log(res)
+          //console.log(res)
           this.$store.dispatch('login',res)
           // nextPage가 있다면 보내주기
           if (this.nextPage){
-            console.log('비교' )
-            console.log(this.nextparams !== {})
+            //console.log('비교' )
+            //console.log(this.nextparams !== {})
             if (this.nextparams !== {}){
-              console.log(this.nextparams)
+              //console.log(this.nextparams)
               this.$router.push({name: this.nextPage, params: this.nextparams})
               // this.$router.push(`${this.nextPage}/${this.nextparams}`)
               this.setNextPage('')
@@ -125,7 +125,7 @@ export default {
         data: this.credentials,
       })
         .then(res => {
-          console.log(res)
+          //console.log(res)
           this.credentials.username=''
           this.credentials.password=''
           this.toggleForm()

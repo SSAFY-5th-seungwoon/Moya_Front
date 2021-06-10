@@ -69,11 +69,11 @@ export default {
         headers: this.setToken(this.$store.state.token)
       })
       .then(res => {
-        console.log(res)
+        //console.log(res)
         this.$emit('deleteComment')
       })
       .catch(err => {
-        console.log(err)
+        //console.log(err)
       })
     },
     deleteComment: function () {
@@ -83,11 +83,11 @@ export default {
         headers: this.setToken(this.$store.state.token)
       })
       .then(res => {
-        console.log(res)
+        //console.log(res)
         this.$emit('deleteComment')
       })
       .catch(err => {
-        console.log(err.response)
+        //console.log(err.response)
         alert('해당 작성자만 삭제할 수 있습니다.')
       })
     },

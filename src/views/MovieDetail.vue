@@ -32,10 +32,10 @@ export default {
   methods : {
     getMovie : function(){
       const url = BACKEND + 'movies/detail/' + this.$route.params.movie_pk
-      console.log(url)
+      //console.log(url)
       axios.get(url)
         .then((res) => {
-          console.log(res)
+          //console.log(res)
           this.movie = res.data['movie'][0]
           this.same_genres = res.data.same_genres
         })

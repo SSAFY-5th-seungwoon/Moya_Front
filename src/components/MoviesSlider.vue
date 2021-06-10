@@ -71,7 +71,7 @@ export default {
   },
   methods : {
     slideChangeTransitionStart : function() {
-      console.log(this.swiper.activeIndex); //현재 index값 얻기
+      //console.log(this.swiper.activeIndex); //현재 index값 얻기
     },
 
 

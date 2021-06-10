@@ -46,13 +46,13 @@ export default {
     getData : function(){
       if(this.dupCheck){
         this.dupCheck=false
-        console.log("페이지:"+this.page)
+        //console.log("페이지:"+this.page)
         axios({
           method: 'get',
           url: `${BACKEND}community/?page=${this.page}`,
         })
           .then(res => {
-            console.log(res)
+            //console.log(res)
 
             this.reviews= this.reviews.concat(res.data)
 

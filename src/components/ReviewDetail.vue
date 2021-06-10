@@ -258,7 +258,7 @@ export default {
 				headers: this.setToken(),
       })
       .then(res => {
-        console.log(res)
+        //console.log(res)
 				this.movie_like_users = res.data[1]
         this.detail = res.data[0]
         this.comments = res.data[0].comment_set
