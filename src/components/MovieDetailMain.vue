@@ -180,7 +180,7 @@ export default {
           // body.className =''
           this.$router.push({ name: 'Review', params:{detail: res.data.id} })
         })
-        .catch(err => {
+        .catch(() => {
           //console.log(err)
         })
     }

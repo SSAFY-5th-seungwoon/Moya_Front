@@ -124,7 +124,7 @@ export default {
         url: `${BACKEND}accounts/signup/`,
         data: this.credentials,
       })
-        .then(res => {
+        .then(() => {
           //console.log(res)
           this.credentials.username=''
           this.credentials.password=''
