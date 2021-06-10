@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="stat borders">
-            <div class="value">{{review.funny_users.length+review.like_users.length+review.helpful_users.length}}</div>
+            <div class="value">{{review.like_users_count}}</div>
             <div class="type">recommend</div>
         </div>
         <div class="stat">
