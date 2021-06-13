@@ -37,6 +37,11 @@ html.addEventListener("mousemove", function(e) {
   html.style.setProperty('--y', e.clientY + 'px')
 })
 
+html.addEventListener("touchmove", function(e) {    
+  html.style.setProperty('--x', e.clientX + 'px')
+  html.style.setProperty('--y', e.clientY + 'px')
+})
+
 window.addEventListener("load", function(){
   html.style.setProperty('--x', 0)
   html.style.setProperty('--y', 0)
