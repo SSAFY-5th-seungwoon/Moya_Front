@@ -62,7 +62,7 @@ window.addEventListener("load", function(){
 }
 
 .box {
-  background: url('../assets/Intro/nature.jpg');       /*this*/
+  background: url('../assets/Intro/nature-min.jpg');       /*this*/
   background-size: cover;       
   background-position: center;  
   background-attachment: fixed; 

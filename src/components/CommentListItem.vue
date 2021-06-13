@@ -68,11 +68,11 @@ export default {
         url: `${BACKEND}community/${this.comment.id}/comment/like/`,
         headers: this.setToken(this.$store.state.token)
       })
-      .then(res => {
+      .then(() => {
         //console.log(res)
         this.$emit('deleteComment')
       })
-      .catch(err => {
+      .catch(() => {
         //console.log(err)
       })
     },
@@ -82,11 +82,11 @@ export default {
         url: `${BACKEND}community/comment/${this.comment.id}/delete/`,
         headers: this.setToken(this.$store.state.token)
       })
-      .then(res => {
+      .then(() => {
         //console.log(res)
         this.$emit('deleteComment')
       })
-      .catch(err => {
+      .catch(() => {
         //console.log(err.response)
         alert('해당 작성자만 삭제할 수 있습니다.')
       })

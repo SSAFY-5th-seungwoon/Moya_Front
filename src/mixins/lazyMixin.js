@@ -27,18 +27,18 @@ export default {
       imageHeight: 0,
       imageState: 'loading',
       asyncImage: new Image(),
-      errorImage : "../assets/movies/error.png",
+      errorImage : require("@/assets/movies/error.png"),
       //https://icons8.com/preloaders/
-      loadingImage : "../assets/movies/loadimage.gif",
+      loadingImage : require("@/assets/movies/loadimage.gif"),
     }
   },
   computed: {
     computedStyle() {
       if (this.imageState === 'loading') {
-        return 'background-image: url(' + this.loadingImage + ');'
+        return 'background: url(' + this.loadingImage + ');'
       }
       if (this.imageState === 'error') {
-        return 'background-image: url(' + this.errorImage + ');'
+        return 'background: url(' + this.errorImage + ');'
       }
       if (this.imageState === 'loaded') {
         return 'background-image: url(' + this.asyncImage.src + '); background-size: ' + this.backgroundSize
@@ -48,7 +48,9 @@ export default {
   },
   methods: {
     fetchImage() {
+      // 이미지가 성공적으로 load 되었을 때
       this.asyncImage.onload = this.imageOnLoad
+      //이미지가 load에서 error 났을 경우
       this.asyncImage.onerror = this.imageOnError
       this.imageState = 'loading'
       this.asyncImage.src = this.imageSource
