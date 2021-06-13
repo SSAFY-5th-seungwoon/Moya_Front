@@ -39,8 +39,8 @@ html.addEventListener("mousemove", function(e) {
 
 html.addEventListener("touchmove", function(e) {    
   e.preventDefault();  
-  html.style.setProperty('--x', e.originalEvent.touches[0].clientX + 'px')
-  html.style.setProperty('--y', e.originalEvent.touches[0].clientY + 'px')
+  html.style.setProperty('--x', e.touches[0].clientX + 'px')
+  html.style.setProperty('--y', e.touches[0].clientY + 'px')
 })
 
 window.addEventListener("load", function(){
