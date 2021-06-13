@@ -120,6 +120,7 @@ export default {
   transition: 1s;
   padding-bottom : 50px;
   background-position: center center;
+  background-repeat : no-repeat;
 }
 .contentBx h2
 {

@@ -7,7 +7,7 @@
     
     <MoviesSliderItem v-for="(movie, idx) in movies" :key="idx" :movie="movie" 
       :image-source="movie | imageURL"
-      background-size="cover"
+      background-size="100% 100%"
     />
 		<!-- pagination -->
 
