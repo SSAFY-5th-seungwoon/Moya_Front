@@ -35,10 +35,10 @@ export default {
   computed: {
     computedStyle() {
       if (this.imageState === 'loading') {
-        return 'background: url(' + this.loadingImage + ');'
+        return 'background-image: url(' + this.loadingImage + '); background-size: ' + this.backgroundSize
       }
       if (this.imageState === 'error') {
-        return 'background: url(' + this.errorImage + ');'
+        return 'background-image: url(' + this.errorImage + '); background-size: ' + this.backgroundSize
       }
       if (this.imageState === 'loaded') {
         return 'background-image: url(' + this.asyncImage.src + '); background-size: ' + this.backgroundSize
