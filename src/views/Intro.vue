@@ -38,8 +38,9 @@ html.addEventListener("mousemove", function(e) {
 })
 
 html.addEventListener("touchmove", function(e) {    
-  html.style.setProperty('--x', e.originalEvent.touches[0].pageX + 'px')
-  html.style.setProperty('--y', e.originalEvent.touches[0].pageY + 'px')
+  e.preventDefault();  
+  html.style.setProperty('--x', e.originalEvent.touches[0].clientX + 'px')
+  html.style.setProperty('--y', e.originalEvent.touches[0].clientY + 'px')
 })
 
 window.addEventListener("load", function(){
