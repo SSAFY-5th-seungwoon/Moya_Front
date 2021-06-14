@@ -15,8 +15,6 @@
 </template>
 
 <script>
-import Axios from 'axios'
-const BACKEND = process.env.VUE_APP_BACKEND_LINK
 
 export default {
   name : 'Intro',
@@ -25,9 +23,6 @@ export default {
       this.$router.push({name : 'Movies' })
     }
   },
-  created : function(){
-    Axios.get(`${BACKEND}data/wakeUp`)
-  }
 }
 
 const html = document.documentElement

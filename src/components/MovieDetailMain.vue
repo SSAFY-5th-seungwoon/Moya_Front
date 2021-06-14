@@ -11,7 +11,7 @@
           <div class="col-lg-7">
             <div class="transformers-content">
               <h2>{{ movie.title }}</h2>
-              <p>{{ movie.genres | getGernres}}</p>
+              <p>{{ movie.genres | getGenres}}</p>
               <ul>
                 <li>
                   <div class="transformers-left">
@@ -137,10 +137,15 @@ export default {
   },
   mixins : [movieMixin],
   filters : {
-    getGernres : function(genres){
-      return genres.map((genre) => {
-        return genre.name
-      }).join(" | ")
+    getGenres : function(genres){
+      if(genres){
+        return genres.map((genre) => {
+          return genre.name
+        }).join(" | ")
+      } else {
+        return ""
+      }
+
     }
   },
   methods: {
