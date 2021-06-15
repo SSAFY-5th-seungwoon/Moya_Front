@@ -23,6 +23,12 @@ export default {
       this.$router.push({name : 'Movies' })
     }
   },
+  mounted : function(){
+    const mobileCheck = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+    if(mobileCheck){
+      alert("모바일에서는 정상적으로 작동하지 않을 수 있습니다.")
+    }
+  }
 }
 
 const html = document.documentElement
