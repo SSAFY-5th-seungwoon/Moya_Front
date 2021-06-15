@@ -26,7 +26,7 @@ export default {
   mounted : function(){
     const mobileCheck = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
     if(mobileCheck){
-      alert("모바일에서는 정상적으로 작동하지 않을 수 있습니다.")
+      alert("모바일에서는 정상적으로 작동하지 않을 수 있습니다.\n이 페이지는 손가락을 대고 사진을 문질러보세요\n사진을 클릭하면 메인페이지로 넘어갑니다")
     }
   }
 }
